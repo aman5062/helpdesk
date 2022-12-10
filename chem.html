@@ -145,7 +145,7 @@
         <a href="chem.html" class="active">Chemistry</a>
         <a href="bee.html">B.E.E</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars" style="background-color: transparent;"></i>
+          <i class="fa fa-bars" id="bar" style="background-color: transparent;"></i>
         </a>
       </div>
     <div id="body"><center>
@@ -203,14 +203,20 @@
     </div>
 </body>
 <script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    } 
-    
-    </script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+    var y = document.getElementById("bar");
+    if (y.className === "fa fa-bars") {
+      y.className = "fa fa-times";
+    } else {
+      y.className = "fa fa-bars";
+    }
+  }
+  
+  </script>
 </html>
